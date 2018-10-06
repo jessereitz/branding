@@ -72,13 +72,6 @@ button:focus {
   border-color: #8799AD;
   box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.1); }
 
-input[type=submit],
-input[type=button],
-button {
-  display: inline-block;
-  width: auto;
-  margin: 0.5em 0.5rem; }
-
 input[type=submit]:first-child,
 input[type=button]:first-child,
 button:first-child {
