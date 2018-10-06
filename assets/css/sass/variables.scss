@@ -1,0 +1,56 @@
+// Variables
+
+// layout sizing
+$max-text-width: 35em;
+
+$padding--standard: 1em 1rem;
+$padding--x-small: 0.25em 0.25rem;
+$padding--small: 0.5em 0.5rem;
+$padding--large: 1.5em 1.5rem;
+$padding--none: 0;
+
+$margin-top-bottom--standard: 1em;
+$margin-top-bottom--x-small: 0.25em;
+$margin-top-bottom--small: 0.5em;
+$margin-top-bottom--large: 1.5em;
+
+$margin-sides---standard: 1rem;
+$margin-sides--small: 0.5rem;
+$margin-sides--large: 1.5rem;
+
+$margin--standard: $margin-top-bottom--standard $margin-sides---standard;
+$margin--small: $margin-top-bottom--small $margin-sides--small;
+$margin--large: $margin-top-bottom--large $margin-sides--large;
+$margin--none: 0;
+$margin-center--standard: 1em auto;
+
+$border-radius--standard: 0.2em;
+
+// Colors
+$primary-color--dark: #333;
+$primary-color--light: #fff;
+$accent-color: #8799AD;
+
+// Transitions
+$transition-time--standard: 0.2s;
+$transition-time--long: $transition-time--standard * 2;
+$transtion-all: all $transition-time--standard;
+
+// font-stack
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Roboto:400,700');
+
+$standard-font: 'Roboto', sans-serif;
+$heading-font: 'Comfortaa', sans-serif;
+
+$font-size--standard: 1rem;
+$font-size--x-large: 2rem;
+$font-size--large: 1.5rem;
+$font-size--medium: 1.25rem;
+$font-size--small: 0.75rem;
+
+$line-height--standard: $font-size--standard * 1.3;
+
+$heading-color: lighten($accent-color, 30%);
+$text-color--dark: lighten($primary-color--dark, 10%);
+$text-color--light: $primary-color--light;
+$link-color: $accent-color;

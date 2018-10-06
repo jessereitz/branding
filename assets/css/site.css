@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700|Roboto:400,700");
+body {
+  background: #697f98;
+  padding: 0;
+  margin: 0; }
+
+body * {
+  box-sizing: border-box;
+  color: #fff; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Comfortaa", sans-serif;
+  padding: 0.5em 0.5rem;
+  color: #e2e6eb; }
+
+h2 {
+  border-bottom: 1px solid #b4c0cc; }
+
+p, a, div, form {
+  font-family: "Roboto", sans-serif;
+  max-width: 35em;
+  margin: 1em auto;
+  line-height: 1.3rem;
+  padding: 0; }
+
+a {
+  display: inline-block;
+  color: #8799AD;
+  text-decoration: none;
+  transition: all 0.4s;
+  font-weight: bold;
+  border-bottom: 1px solid #8799AD;
+  padding: 0;
+  margin: 0; }
+
+a:hover {
+  position: relative;
+  color: #49596b;
+  border-bottom: 1px solid #49596b; }
+
+label {
+  margin: 1em 0;
+  margin-bottom: 0.25em; }
+
+label + input,
+label + textarea {
+  margin-top: 0.25em; }
+
+input, textarea, button {
+  box-sizing: border-box;
+  display: block;
+  margin-left: 0;
+  margin: 1em 0;
+  max-width: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 0.5em 0.5rem;
+  border: 1px solid gray;
+  transition: all 0.2s;
+  background: none;
+  border-radius: 0.2em; }
+
+textarea {
+  min-height: 2.6rem;
+  resize: vertical;
+  transition: resize 0s; }
+
+input:focus,
+textarea:focus,
+button:focus {
+  border-color: #8799AD;
+  box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.1); }
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover {
+  color: #fff;
+  border-color: #8799AD;
+  background: #8799AD;
+  box-shadow: 0.1em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.15em); }
+
+input[type=submit]:active,
+input[type=button]:active,
+button:active {
+  position: relative;
+  transform: translateY(0.1em); }
+
+form {
+  background: #fff;
+  padding: 1em 1rem;
+  color: #4d4d4d;
+  border-radius: 0.2em;
+  box-shadow: 0.2em 0.2em 0.4em 0.1em rgba(0, 0, 0, 0.2); }
+  form * {
+    color: #4d4d4d; }
+
+/*# sourceMappingURL=site.css.map */
