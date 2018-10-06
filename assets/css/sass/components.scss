@@ -1,0 +1,16 @@
+form,
+.hover-card {
+  background: $primary-color--light;
+  padding: $padding--standard;
+  color: $text-color--dark;
+  border-radius: $border-radius--standard;
+  box-shadow: 0.2em 0.2em 0.4em 0.1em rgba(0,0,0,0.2);
+
+  & * {
+    color: $text-color--dark;
+  }
+
+  & h1, h2, h3 {
+    color: darken($heading-color, 30%);
+  }
+}

@@ -25,18 +25,18 @@ p, a, div, form {
 
 a {
   display: inline-block;
-  color: #8799AD;
+  color: #a5b3c2;
   text-decoration: none;
   transition: all 0.4s;
   font-weight: bold;
-  border-bottom: 1px solid #8799AD;
+  border-bottom: 1px solid #a5b3c2;
   padding: 0;
   margin: 0; }
 
 a:hover {
   position: relative;
-  color: #49596b;
-  border-bottom: 1px solid #49596b; }
+  color: #f1f3f5;
+  border-bottom: 1px solid #f1f3f5; }
 
 label {
   margin: 1em 0;
@@ -87,13 +87,20 @@ button:active {
   position: relative;
   transform: translateY(0.1em); }
 
-form {
+form,
+.hover-card {
   background: #fff;
   padding: 1em 1rem;
   color: #4d4d4d;
   border-radius: 0.2em;
   box-shadow: 0.2em 0.2em 0.4em 0.1em rgba(0, 0, 0, 0.2); }
-  form * {
+  form *,
+  .hover-card * {
     color: #4d4d4d; }
+  form h1, form h2, form h3,
+  .hover-card h1,
+  .hover-card h2,
+  .hover-card h3 {
+    color: #8799ad; }
 
 /*# sourceMappingURL=site.css.map */

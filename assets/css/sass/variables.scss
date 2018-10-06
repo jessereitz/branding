@@ -53,4 +53,4 @@ $line-height--standard: $font-size--standard * 1.3;
 $heading-color: lighten($accent-color, 30%);
 $text-color--dark: lighten($primary-color--dark, 10%);
 $text-color--light: $primary-color--light;
-$link-color: $accent-color;
+$link-color: lighten($accent-color, 10%);
