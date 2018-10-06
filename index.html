@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Jesse Reitz Branding</title>
     <link href="./assets/css/site.css" type="text/css" rel="stylesheet">
+    <script crossorigin src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link href="./assets/css/code-theme.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <section class="full-height">
@@ -30,8 +32,10 @@
       <input type="text">
       <label>Textareea</label>
       <textarea rows="5">This is a textarea.</textarea>
-      <input type="submit">
-      <button>Button</button>
+      <div class="button-ctn">
+        <button>Button</button>
+        <input type="submit">
+      </div>
     </form>
 
     <div class="hover-card">
@@ -39,6 +43,31 @@
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna. Eleifend quam adipiscing vitae proin sagittis nisl. Volutpat blandit aliquam etiam erat velit. Tellus elementum sagittis vitae et leo duis. Elit duis tristique sollicitudin nibh sit. Nunc sed velit dignissim sodales ut eu. Quis lectus nulla at volutpat diam ut. Quisque sagittis purus sit amet volutpat. Risus pretium quam vulputate dignissim suspendisse in est ante in. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Fermentum dui faucibus in ornare quam viverra orci sagittis. Sed ullamcorper morbi tincidunt ornare massa.
       </p>
+    </div>
+
+    <div class="hover-card">
+      <h2>HTML Code Sample</h2>
+<pre class="prettyprint lang-html">
+&lt;div class="test"&gt;
+  test
+&lt;/div&gt;
+&lt;span&gt;
+  Some more code here
+&lt;/span&gt;
+</pre>
+    </div>
+
+    <div class="hover-card">
+      <h2>Javascript Code Sample</h2>
+<pre class="prettyprint lang-javascript">
+function WriteFree() {
+  const integer = 3;
+  let string = 'Sample String';
+
+  return `${string} integer ${integer}`;
+}
+const wf = WriteFree();
+</pre>
     </div>
   </body>
 </html>

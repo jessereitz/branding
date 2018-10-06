@@ -14,3 +14,19 @@ form,
     color: darken($heading-color, 30%);
   }
 }
+
+.button-ctn {
+  margin: $margin--none;
+
+  & input[type=submit],
+  input[type=button],
+  button {
+    display: inline-block;
+    width: auto;
+    margin: $margin--small;
+  }
+}
+
+.prettyprint {
+  padding: $padding--standard !important;
+}

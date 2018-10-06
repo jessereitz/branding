@@ -86,6 +86,20 @@ button:focus {
   box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0,0,0,0.1);
 }
 
+input[type=submit],
+input[type=button],
+button {
+  display: inline-block;
+  width: auto;
+  margin: $margin--small;
+}
+
+input[type=submit]:first-child,
+input[type=button]:first-child,
+button:first-child {
+  margin-left: 0 !important;
+}
+
 input[type=submit]:hover,
 input[type=button]:hover,
 button:hover {

@@ -72,6 +72,18 @@ button:focus {
   border-color: #8799AD;
   box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.1); }
 
+input[type=submit],
+input[type=button],
+button {
+  display: inline-block;
+  width: auto;
+  margin: 0.5em 0.5rem; }
+
+input[type=submit]:first-child,
+input[type=button]:first-child,
+button:first-child {
+  margin-left: 0 !important; }
+
 input[type=submit]:hover,
 input[type=button]:hover,
 button:hover {
@@ -102,5 +114,17 @@ form,
   .hover-card h2,
   .hover-card h3 {
     color: #8799ad; }
+
+.button-ctn {
+  margin: 0; }
+  .button-ctn input[type=submit],
+  .button-ctn input[type=button],
+  .button-ctn button {
+    display: inline-block;
+    width: auto;
+    margin: 0.5em 0.5rem; }
+
+.prettyprint {
+  padding: 1em 1rem !important; }
 
 /*# sourceMappingURL=site.css.map */
