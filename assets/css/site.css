@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700|Roboto:400,700");
 body {
   background: #476da4;
-  padding: 0;
+  padding: 1em 1rem;
   margin: 0;
+  font-size: 1em;
 }
 
 body::before {
@@ -13,7 +14,8 @@ body::before {
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(115deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2));
+  z-index: -1;
 }
 
 body * {
@@ -35,25 +37,25 @@ p, a, div, form {
   font-family: "Roboto", sans-serif;
   max-width: 35em;
   margin: 1em auto;
-  line-height: 1.45rem;
+  line-height: 1.45em;
   padding: 0;
 }
 
 a {
   display: inline-block;
-  color: #87a2ca;
+  color: #fff;
   text-decoration: none;
   transition: all 0.4s;
   font-weight: bold;
-  border-bottom: 1px solid #87a2ca;
+  border-bottom: 1px solid #fff;
   padding: 0;
   margin: 0;
 }
 
 a:hover {
   position: relative;
-  color: #dfe7f1;
-  border-bottom: 1px solid #dfe7f1;
+  color: #B8CC73;
+  border-bottom: 1px solid #B8CC73;
 }
 
 label {
@@ -74,7 +76,7 @@ input, textarea, button {
   max-width: 100%;
   width: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 0.5em 0.5rem;
   border: 1px solid gray;
   transition: all 0.2s;
@@ -83,7 +85,7 @@ input, textarea, button {
 }
 
 textarea {
-  min-height: 2.9rem;
+  min-height: 2.9em;
   resize: vertical;
   transition: resize 0s;
 }
@@ -118,6 +120,17 @@ button:active {
   transform: translateY(0.1em);
 }
 
+dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+dl .dlMeta {
+  color: #e5b800;
+  font-style: italic;
+  font-weight: normal;
+}
+
 form,
 .hover-card {
   background: #fff;
@@ -130,10 +143,11 @@ form *,
 .hover-card * {
   color: #4d4d4d;
 }
-form h1, form h2, form h3,
+form h1, form h2, form h3, form dt,
 .hover-card h1,
 .hover-card h2,
-.hover-card h3 {
+.hover-card h3,
+.hover-card dt {
   color: #6387bb;
 }
 form h3,
@@ -141,8 +155,9 @@ form h3,
   margin-top: 1em;
   margin-bottom: 0;
 }
-form h3 + p,
-.hover-card h3 + p {
+form h3 + p, form h3 + dl,
+.hover-card h3 + p,
+.hover-card h3 + dl {
   margin-top: 0;
   margin-bottom: 1em;
 }
@@ -160,7 +175,12 @@ form h3 + p,
 
 .prettyprint {
   padding: 1em 1rem !important;
-  overflow: scroll;
+  overflow: scroll !important;
+  font-size: 0.9em !important;
+}
+
+code.prettyprint {
+  padding: 0.25em 0.25rem !important;
 }
 
 .align-center {
@@ -176,11 +196,11 @@ form h3 + p,
 }
 
 .font-large {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .font-medium {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 .v-margin-large {

@@ -1,8 +1,9 @@
 
 body {
-  background: darken($accent-color, 10%);
-  padding: $padding--none;
+  background: darken($primary-color, 10%);
+  padding: $padding--standard;
   margin: $margin--none;
+  font-size: $font-size--standard;
 }
 
 body::before {
@@ -16,7 +17,9 @@ body::before {
     background: linear-gradient(115deg,
       rgba(255,255,255,0.18),
       rgba(255,255,255,0),
-      rgba(0,0,0,0.1));
+      rgba(0,0,0,0.2)
+    );
+    z-index: -1;
 }
 
 body * {
@@ -44,11 +47,12 @@ p, a, div, form {
 
 a {
   display: inline-block;
-  color: $link-color;
+  // color: lighten($link-color, 15%);
+  color: #fff;
   text-decoration: none;
   transition: all $transition-time--long;
   font-weight: bold;
-  border-bottom: 1px solid $link-color;
+  border-bottom: 1px solid #fff;
   padding: $padding--none;
   margin: $margin--none;
 
@@ -56,8 +60,8 @@ a {
 
 a:hover {
   position: relative;
-  color: lighten($link-color, 25%);
-  border-bottom: 1px solid lighten($link-color, 25%);
+  color: $link-color;
+  border-bottom: 1px solid $link-color;
 }
 
 label {
@@ -95,7 +99,7 @@ textarea {
 input:focus,
 textarea:focus,
 button:focus {
-  border-color: $accent-color;
+  border-color: $primary-color;
   box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0,0,0,0.1);
 }
 
@@ -109,8 +113,8 @@ input[type=submit]:hover,
 input[type=button]:hover,
 button:hover {
   color: $primary-color--light;
-  border-color: $accent-color;
-  background: $accent-color;
+  border-color: $primary-color;
+  background: $primary-color;
   box-shadow: 0.1em 0.2em 0.2em 0.1em rgba(0,0,0,0.15);
   transform: translateY(-0.15em);
 }
@@ -124,4 +128,17 @@ button:active {
 
 form {
 
+}
+
+dt {
+  font-weight: bold;
+  margin-top: $margin-top-bottom--standard;
+}
+
+dl {
+  .dlMeta {
+    color: darken($accent-color--second, 40%);
+    font-style: italic;
+    font-weight: normal;
+  }
 }

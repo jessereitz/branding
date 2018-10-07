@@ -27,10 +27,13 @@ $margin-center--standard: 1em auto;
 $border-radius--standard: 0.2em;
 
 // Colors
+// Color Scheme at: https://color.adobe.com/Branding-color-theme-11456418/
 $primary-color--dark: #333;
 $primary-color--light: #fff;
-$accent-color: #8799AD;
-$accent-color: #6387BB;
+$primary-color: #6387BB;
+$accent-color: #B8CC73;
+$accent-color--second: #FFF0B2;
+$accent-color--second: #FFF0B2;
 
 // Transitions
 $transition-time--standard: 0.2s;
@@ -43,15 +46,16 @@ $transtion-all: all $transition-time--standard;
 $standard-font: 'Roboto', sans-serif;
 $heading-font: 'Comfortaa', sans-serif;
 
-$font-size--standard: 1rem;
-$font-size--x-large: 2rem;
-$font-size--large: 1.5rem;
-$font-size--medium: 1.25rem;
-$font-size--small: 0.75rem;
+$font-size--standard: 1em;
+$font-size--x-large: 2em;
+$font-size--large: 1.5em;
+$font-size--medium: 1.25em;
+$font-size--small: 0.75em;
 
 $line-height--standard: $font-size--standard * 1.45;
 
-$heading-color: lighten($accent-color, 30%);
+$heading-color: lighten($primary-color, 30%);
 $text-color--dark: lighten($primary-color--dark, 10%);
 $text-color--light: $primary-color--light;
 $link-color: lighten($accent-color, 10%);
+$link-color: $accent-color;

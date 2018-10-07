@@ -10,7 +10,7 @@ form,
     color: $text-color--dark;
   }
 
-  & h1, h2, h3 {
+  & h1, h2, h3, dt {
     color: darken($heading-color, 30%);
   }
 
@@ -19,7 +19,7 @@ form,
     margin-bottom: 0;
   }
 
-  & h3 + p {
+  & h3 + p, h3 + dl {
     margin-top: 0;
     margin-bottom: $margin-top-bottom--standard;
   }
@@ -39,5 +39,10 @@ form,
 
 .prettyprint {
   padding: $padding--standard !important;
-  overflow: scroll;
+  overflow: scroll !important;
+  font-size: 0.9em !important;
+}
+
+code.prettyprint {
+  padding: $margin-top-bottom--x-small ($margin-sides--small / 2) !important;
 }
