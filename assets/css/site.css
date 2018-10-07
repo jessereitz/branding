@@ -139,6 +139,7 @@ form h1, form h2, form h3,
 
 .prettyprint {
   padding: 1em 1rem !important;
+  overflow: scroll;
 }
 
 .align-center {
