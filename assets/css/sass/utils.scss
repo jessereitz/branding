@@ -17,3 +17,35 @@
 .font-medium {
   font-size: $font-size--medium;
 }
+
+
+.v-margin-large {
+  margin-top: $margin-top-bottom--large;
+  margin-bottom: $margin-top-bottom--large;
+}
+
+.v-margin-small {
+  margin-top: $margin-top-bottom--small;
+  margin-bottom: $margin-top-bottom--small;}
+
+.v-margin-standard {
+  margin-top: $margin-top-bottom--standard;
+  margin-bottom: $margin-top-bottom--standard;
+}
+
+.v-margin-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.padding-large {
+  padding: $padding--large;
+}
+
+.padding-small {
+  padding: $padding--small;
+}
+
+.padding-standard {
+  padding: $padding--standard;
+}

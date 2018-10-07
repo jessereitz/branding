@@ -12,7 +12,7 @@ body * {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Comfortaa", sans-serif;
-  padding: 0.5em 0.5rem;
+  padding: 0;
   color: #e2e6eb;
 }
 
@@ -24,7 +24,7 @@ p, a, div, form {
   font-family: "Roboto", sans-serif;
   max-width: 35em;
   margin: 1em auto;
-  line-height: 1.3rem;
+  line-height: 1.45rem;
   padding: 0;
 }
 
@@ -72,7 +72,7 @@ input, textarea, button {
 }
 
 textarea {
-  min-height: 2.6rem;
+  min-height: 2.9rem;
   resize: vertical;
   transition: resize 0s;
 }
@@ -159,6 +159,38 @@ form h1, form h2, form h3,
 
 .font-medium {
   font-size: 1.25rem;
+}
+
+.v-margin-large {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.v-margin-small {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.v-margin-standard {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.v-margin-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.padding-large {
+  padding: 1.5em 1.5rem;
+}
+
+.padding-small {
+  padding: 0.5em 0.5rem;
+}
+
+.padding-standard {
+  padding: 1em 1rem;
 }
 
 /*# sourceMappingURL=site.css.map */
