@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700|Roboto:400,700");
 body {
-  background: #697f98;
+  background: #476da4;
   padding: 0;
   margin: 0;
+}
+
+body::before {
+  display: block;
+  position: fixed;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
 }
 
 body * {
@@ -13,11 +24,11 @@ body * {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Comfortaa", sans-serif;
   padding: 0.25em 0;
-  color: #e2e6eb;
+  color: #ced9e9;
 }
 
 h2 {
-  border-bottom: 1px solid #b4c0cc;
+  border-bottom: 1px solid #98b0d2;
 }
 
 p, a, div, form {
@@ -30,19 +41,19 @@ p, a, div, form {
 
 a {
   display: inline-block;
-  color: #a5b3c2;
+  color: #87a2ca;
   text-decoration: none;
   transition: all 0.4s;
   font-weight: bold;
-  border-bottom: 1px solid #a5b3c2;
+  border-bottom: 1px solid #87a2ca;
   padding: 0;
   margin: 0;
 }
 
 a:hover {
   position: relative;
-  color: #f1f3f5;
-  border-bottom: 1px solid #f1f3f5;
+  color: #dfe7f1;
+  border-bottom: 1px solid #dfe7f1;
 }
 
 label {
@@ -80,7 +91,7 @@ textarea {
 input:focus,
 textarea:focus,
 button:focus {
-  border-color: #8799AD;
+  border-color: #6387BB;
   box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.1);
 }
 
@@ -94,8 +105,8 @@ input[type=submit]:hover,
 input[type=button]:hover,
 button:hover {
   color: #fff;
-  border-color: #8799AD;
-  background: #8799AD;
+  border-color: #6387BB;
+  background: #6387BB;
   box-shadow: 0.1em 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.15);
   transform: translateY(-0.15em);
 }
@@ -123,7 +134,17 @@ form h1, form h2, form h3,
 .hover-card h1,
 .hover-card h2,
 .hover-card h3 {
-  color: #8799ad;
+  color: #6387bb;
+}
+form h3,
+.hover-card h3 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+form h3 + p,
+.hover-card h3 + p {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 .button-ctn {

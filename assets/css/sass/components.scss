@@ -13,6 +13,16 @@ form,
   & h1, h2, h3 {
     color: darken($heading-color, 30%);
   }
+
+  & h3 {
+    margin-top: $margin-top-bottom--standard;
+    margin-bottom: 0;
+  }
+
+  & h3 + p {
+    margin-top: 0;
+    margin-bottom: $margin-top-bottom--standard;
+  }
 }
 
 .button-ctn {

@@ -1,9 +1,22 @@
 
 body {
   background: darken($accent-color, 10%);
-  // background: linear-gradient(135deg, lighten($background, 5%), $background);
   padding: $padding--none;
   margin: $margin--none;
+}
+
+body::before {
+    display: block;
+    position: fixed;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(115deg,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0),
+      rgba(0,0,0,0.1));
 }
 
 body * {
