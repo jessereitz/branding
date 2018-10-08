@@ -4,6 +4,7 @@ body {
   padding: 1em 1rem;
   margin: 0;
   font-size: 1em;
+  scroll-behavior: smooth;
 }
 
 body::before {
@@ -143,6 +144,7 @@ form *,
 .hover-card * {
   color: #4d4d4d;
 }
+
 form h1, form h2, form h3, form dt,
 .hover-card h1,
 .hover-card h2,
@@ -183,6 +185,114 @@ code.prettyprint {
   padding: 0.25em 0.25rem !important;
 }
 
+.r_menu__ctn {
+  display: block;
+  position: fixed;
+  right: 1em;
+  top: 0;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.r_menu__ctn.hover-card .r_menu__button {
+  background: none;
+}
+.r_menu__ctn.hover-card .r_menu__button:hover {
+  background: #6387BB;
+}
+.r_menu__ctn.hover-card .r_menu__button::before {
+  display: none;
+}
+
+.r_menu__button {
+  display: inline-block;
+  position: absolute;
+  right: 0.25em;
+  top: 0.25em;
+  width: auto;
+  margin: 0;
+  padding: 0.5em 0.5rem;
+  transition: all 0.2s;
+  z-index: 100;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: #406192;
+}
+
+.r_menu__button:hover {
+  transform: none;
+}
+
+.r_menu__button::before {
+  constent: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(125deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+  background: orange;
+}
+
+.r_menu__button:active {
+  position: absolute;
+  transform: none;
+}
+
+.r_menu__nav {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  transition: all 0.2s;
+  max-width: 1000vw;
+  max-height: 1000vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.r_menu__nav a {
+  display: block;
+  width: auto;
+  font-size: 1.25em;
+}
+.r_menu__nav a:hover {
+  color: #6387BB;
+  border-color: #6387BB;
+}
+
+.r_menu__nav--hidden a {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0;
+}
+
+@media screen and (max-width: 700px) {
+  .r_menu__ctn {
+    width: auto;
+  }
+
+  .r_menu__ctn.hover-card {
+    margin-left: 1em;
+  }
+
+  .r_menu__nav {
+    width: 100%;
+    height: 100%;
+    max-width: auto;
+    max-width: auto;
+    white-space: normal;
+  }
+  .r_menu__nav a {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #6387BB;
+  }
+  .r_menu__nav a:last-child {
+    border-color: rgba(0, 0, 0, 0);
+  }
+}
 .align-center {
   text-align: center;
 }

@@ -33,12 +33,11 @@ $primary-color--light: #fff;
 $primary-color: #6387BB;
 $accent-color: #B8CC73;
 $accent-color--second: #FFF0B2;
-$accent-color--second: #FFF0B2;
 
 // Transitions
 $transition-time--standard: 0.2s;
 $transition-time--long: $transition-time--standard * 2;
-$transtion-all: all $transition-time--standard;
+$transition-all: all $transition-time--standard;
 
 // font-stack
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Roboto:400,700');

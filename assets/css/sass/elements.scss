@@ -4,6 +4,7 @@ body {
   padding: $padding--standard;
   margin: $margin--none;
   font-size: $font-size--standard;
+  scroll-behavior: smooth;
 }
 
 body::before {
@@ -85,7 +86,7 @@ input, textarea, button {
   font-size: $font-size--standard;
   padding: $padding--small;
   border: 1px solid lighten($text-color--dark, 20%);
-  transition: $transtion-all;
+  transition: $transition-all;
   background: none;
   border-radius: $border-radius--standard;
 }

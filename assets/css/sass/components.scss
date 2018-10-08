@@ -1,5 +1,4 @@
-form,
-.hover-card {
+%hover-card {
   background: $primary-color--light;
   padding: $padding--standard;
   color: $text-color--dark;
@@ -9,7 +8,11 @@ form,
   & * {
     color: $text-color--dark;
   }
+}
 
+form,
+.hover-card {
+  @extend %hover-card;
   & h1, h2, h3, dt {
     color: darken($heading-color, 30%);
   }
@@ -45,4 +48,121 @@ form,
 
 code.prettyprint {
   padding: $margin-top-bottom--x-small ($margin-sides--small / 2) !important;
+}
+
+.r_menu__ctn {
+  display: block;
+  position: fixed;
+  right: 1em;
+  top: 0;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.r_menu__ctn.hover-card {
+  .r_menu__button {
+    background: none;
+  }
+
+  .r_menu__button:hover {
+    background:$primary-color;
+  }
+
+  .r_menu__button::before {
+    display: none;
+  }
+}
+
+.r_menu__button {
+  display: inline-block;
+  position: absolute;
+  right: 0.25em;
+  top: 0.25em;
+  width: auto;
+  margin: 0;
+  padding: $padding--small;
+  transition: $transition-all;
+  z-index: 100;
+  border-color: rgba(255,255,255,0.5);
+  background: darken($primary-color, 15%);
+}
+
+.r_menu__button:hover {
+  transform: none;
+}
+
+.r_menu__button::before {
+  constent: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(125deg, rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+  background: orange;
+}
+
+.r_menu__button:active {
+  position: absolute;
+  transform: none;
+}
+
+.r_menu__nav {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  transition: $transition-all;
+  max-width: 1000vw;
+  max-height: 1000vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  & a {
+    display: block;
+    width: auto;
+    font-size: $font-size--medium;
+  }
+
+  & a:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.r_menu__nav--hidden {
+  a {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .r_menu__ctn {
+    width: auto;
+  }
+
+  .r_menu__ctn.hover-card {
+    margin-left: 1em;
+  }
+
+  .r_menu__nav {
+    width: 100%;
+    height: 100%;
+    max-width: auto;
+    max-width: auto;
+    white-space: normal;
+    & a {
+      width: 100%;
+      max-width: 100%;
+      padding: $margin-top-bottom--small 0;
+      border-bottom: 1px solid $primary-color;
+    }
+
+    & a:last-child {
+      border-color: rgba(0,0,0,0);
+    }
+  }
 }
