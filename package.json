@@ -4,7 +4,10 @@
   "description": "Jesse Reitz branding theme.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-watch": "sass --watch assets/css/sass/main.scss:assets/css/site.css",
+    "sassify": "sass assets/css/sass/main.scss:assets/css/site.css",
+    "build-iife": "./node_modules/.bin/rollup -c rollup.config.js",
+    "build-prod": "npm run sassify && BUILDTARGET='PROD' npm run build-iife"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,22 @@
   "bugs": {
     "url": "https://github.com/jessereitz/branding/issues"
   },
-  "homepage": "https://github.com/jessereitz/branding#readme"
+  "homepage": "https://github.com/jessereitz/branding#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-external-helpers": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "rollup": "^0.66.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  },
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.3"
+  }
 }
