@@ -4,8 +4,8 @@
   "description": "Jesse Reitz branding theme.",
   "main": "index.js",
   "scripts": {
-    "sass-watch": "sass --watch assets/css/sass/main.scss:assets/css/site.css",
-    "sassify": "sass assets/css/sass/main.scss:assets/css/site.css",
+    "sass-watch": "sass --watch sass/main.scss:assets/css/site.css",
+    "sassify": "sass sass/main.scss:assets/css/site.css",
     "build-iife": "./node_modules/.bin/rollup -c rollup.config.js",
     "build-prod": "npm run sassify && BUILDTARGET='PROD' npm run build-iife"
   },
