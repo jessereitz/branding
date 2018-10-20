@@ -2,20 +2,31 @@
 Branding is probably a bit of a strong word here. Essentially, this is a collection
 of JavaScript and CSS to provide a unifying theme between my projects.
 
-## Usage
+## Including The Libraries
 I use the [jsDelivr](https://www.jsdelivr.com/) cdn to serve these from GitHub.
 To use each library, use the following tags, replacing '--version--' with the
 [latest release version](https://github.com/jessereitz/branding/releases) of
 this repo.
 
-To use the JavaScript library, include the following:
+To include the JavaScript library, include the following:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/jessereitz/branding@--version--/assets/js/rbrandlib.js" type="text/javascript"></script>
 ```
-To use the CSS library, include the following:
+To include the CSS library, include the following:
 ```html
 <link href="https://cdn.jsdelivr.net/combine/gh/jessereitz/branding@--version--/assets/css/site.min.css" type="text/css" rel="stylesheet">
 ```
+
+## Usage
+The CSS library is mainly based on tags, not classes or ids. It doesn't need
+much configuration. Just load and go.
+
+The JavaScript library includes the following components:
+
+### Menu
+To include a menu, simply add the class `menuTarget` to any text element. This
+will create a link in the menu using the element's textContent as its own text.
+Clicking the link will scroll the element into view.
 
 If including code snippets, I use [Google's code-prettify](https://github.com/google/code-prettify)
 with a [custom theme from Yoshihide Jimbo](https://github.com/jmblog/color-themes-for-google-code-prettify).

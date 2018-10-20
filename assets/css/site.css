@@ -255,6 +255,7 @@ code.prettyprint {
   display: block;
   width: auto;
   font-size: 1.25em;
+  font-weight: normal;
 }
 .r_menu__nav a:hover {
   color: #6387BB;
