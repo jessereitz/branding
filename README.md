@@ -42,7 +42,7 @@ A <code\> tag can also be used but only for inline snippets.
 For JavaScript, I use [rollup.js](https://rollupjs.org/guide/en) to package
 everything into a single file. I also use [Babel](https://babeljs.io/) to
 transpile everything and [UglifyJS](https://github.com/mishoo/UglifyJS2) to
-minimize it.
+minimize it. All JavaScript is linted using the [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 For CSS, everything is written in SCSS and packaged into a single site.css file.
 
