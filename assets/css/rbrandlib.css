@@ -196,9 +196,11 @@ code.prettyprint {
 
 .r_menu__ctn.hover-card .r_menu__button {
   background: none;
+  color: #333;
 }
 .r_menu__ctn.hover-card .r_menu__button:hover {
   background: #6387BB;
+  color: #fff;
 }
 .r_menu__ctn.hover-card .r_menu__button::before {
   display: none;
@@ -214,8 +216,10 @@ code.prettyprint {
   padding: 0.5em 0.5rem;
   transition: all 0.2s;
   z-index: 100;
-  border-color: rgba(255, 255, 255, 0.5);
-  background: #406192;
+  border-color: white;
+  color: #fff;
+  border-width: 2px;
+  background: none;
 }
 
 .r_menu__button:hover {
@@ -334,6 +338,10 @@ code.prettyprint {
   margin-bottom: 0;
 }
 
+.margin-none {
+  margin: 0;
+}
+
 .padding-large {
   padding: 1.5em 1.5rem;
 }
@@ -344,6 +352,21 @@ code.prettyprint {
 
 .padding-standard {
   padding: 1em 1rem;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.r_vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.r_full-width {
+  width: 100%;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=rbrandlib.css.map */

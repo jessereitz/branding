@@ -62,10 +62,12 @@ code.prettyprint {
 .r_menu__ctn.hover-card {
   .r_menu__button {
     background: none;
+    color: $primary-color--dark;
   }
 
   .r_menu__button:hover {
     background:$primary-color;
+    color: $primary-color--light;
   }
 
   .r_menu__button::before {
@@ -83,8 +85,10 @@ code.prettyprint {
   padding: $padding--small;
   transition: $transition-all;
   z-index: 100;
-  border-color: rgba(255,255,255,0.5);
-  background: darken($primary-color, 15%);
+  border-color: rgba(255,255,255,1);
+  color: #fff;
+  border-width: 2px;
+  background: none;
 }
 
 .r_menu__button:hover {
