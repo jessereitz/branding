@@ -6,6 +6,8 @@
   "scripts": {
     "sass-watch": "sass --watch sass/main.scss:assets/css/rbrandlib.css",
     "sassify": "sass sass/main.scss:assets/css/rbrandlib.css",
+    "rollup-watch": "./node_modules/.bin/rollup -c rollup.config.js --watch",
+    "start-dev": "npm run sass-watch | npm run rollup-watch",
     "build-iife": "./node_modules/.bin/rollup -c rollup.config.js",
     "build-prod": "npm run sassify && BUILDTARGET='PROD' npm run build-iife"
   },

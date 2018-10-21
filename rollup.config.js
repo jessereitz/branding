@@ -9,13 +9,13 @@ const plugins = [
   resolve(),
   commonjs(),
   eslint(),
-  babel({
-    exclude: 'node_modules/**',
-    externalHelpers: true,
-  }),
 ];
 
 if (process.env.BUILDTARGET === 'PROD') {
+  plugins.push(babel({
+    exclude: 'node_modules/**',
+    externalHelpers: true,
+  }));
   plugins.push(uglify());
 }
 
@@ -25,7 +25,7 @@ export default {
     file: 'assets/js/rbrandlib.js',
     format: 'iife',
     name: 'WriteFree',
-    sourceMap: false,
+    sourcemap: true,
   },
   plugins,
 };

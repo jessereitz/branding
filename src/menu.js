@@ -1,4 +1,3 @@
-import smoothscroll from 'smoothscroll-polyfill';
 import { generateButton, generateElement } from './lib';
 
 const hoverCardClass = 'hover-card';
@@ -22,7 +21,6 @@ const HeadingMenu = {
    * @returns {HeadingMenu} Returns the new Menu.
    */
   init() {
-    smoothscroll.polyfill();
     this.ctn = generateElement('div', { klasses: ctnClass });
     this.toggleBtn = generateButton('Menu', { klasses: btnClass });
     this.toggleBtn.addEventListener('click', this.toggleDisplay.bind(this));
