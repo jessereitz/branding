@@ -95,3 +95,20 @@ export function generateButton(
   $btn.innerHTML = value;
   return $btn;
 }
+
+/**
+ * isChildOfType - Checks if given node is of given targetType or if it's a
+ *  child of that type.
+ *
+ * @param {HTML Element} node The HTML Element to test.
+ * @param {String} targetType The nodeName of the target element type (eg. 'A'
+ *  for anchor tags).
+ *
+ * @returns {HTML Element || false} Returns the found HTML Element. If none is
+ *  found and the function reaches the top-level document, returns false.
+ */
+export function isChildOfType(node, targetType) {
+  if (node.nodeName === targetType) return node;
+  if (node.nodeName === '#document') return false;
+  return isChildOfType(node.parentNode, targetType);
+}

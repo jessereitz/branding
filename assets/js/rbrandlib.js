@@ -542,6 +542,23 @@
 	  return $btn;
 	}
 
+	/**
+	 * isChildOfType - Checks if given node is of given targetType or if it's a
+	 *  child of that type.
+	 *
+	 * @param {HTML Element} node The HTML Element to test.
+	 * @param {String} targetType The nodeName of the target element type (eg. 'A'
+	 *  for anchor tags).
+	 *
+	 * @returns {HTML Element || false} Returns the found HTML Element. If none is
+	 *  found and the function reaches the top-level document, returns false.
+	 */
+	function isChildOfType(node, targetType) {
+	  if (node.nodeName === targetType) return node;
+	  if (node.nodeName === '#document') return false;
+	  return isChildOfType(node.parentNode, targetType);
+	}
+
 	const hoverCardClass = 'hover-card';
 	const baseClass = 'r_menu';
 	const ctnClass = `${baseClass}__ctn`;
@@ -569,6 +586,7 @@
 	    this.ctn.appendChild(this.toggleBtn);
 
 	    this.nav = generateElement('nav', { klasses: [navClass, hiddenClass] });
+	    this.nav.addEventListener('click', this.hide.bind(this));
 	    this.ctn.appendChild(this.nav);
 
 	    this.links = this.generateLinks();
@@ -596,9 +614,10 @@
 	  },
 
 	  /**
-	   * generateLinks - Find
+	   * generateLinks - Iterates through all targets and creates links pointing to
+	   *  them. If the target has data-scrolltarget set, it will use that as the
+	   *  href for the link. Otherwise it uses its id attribute.
 	   *
-	   * @returns {type} Description
 	   */
 	  generateLinks() {
 	    this.links = [];
@@ -607,15 +626,11 @@
 	      const link = generateElement(
 	        'a',
 	        {
-	          href: `#${target.id}`,
+	          href: `#${target.dataset.scrolltarget || target.id}`,
 	          textContent: target.textContent,
+	          'data-scrolltype': 'smooth',
 	        },
 	      );
-	      link.addEventListener('click', (e) => {
-	        e.preventDefault();
-	        this.hide.call(this);
-	        target.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-	      });
 	      this.links.push(link);
 	      this.nav.appendChild(link);
 	    });
@@ -660,8 +675,43 @@
 	  },
 	};
 
+	/**
+	 * findScrollTarget - Finds the element to which a link points in its href.
+	 *
+	 * @param {HTML Element} el The HTML link for which to find the target element.
+	 *
+	 * @returns {HTML Element} Returns the found HTML Element matching the id in the
+	 *  href attribute.
+	 */
+	function findScrollTarget(el) {
+	  return document.getElementById(el.href.substring(el.href.indexOf('#') + 1));
+	}
+
+	/**
+	 * smoothScroll - Checks if a link should cause a smooth scroll
+	 *  (data-scrolltype="smooth"), then smooth scrolls to its target. The target is
+	 *  found and cached on the target itself the first time this function is
+	 *  called.
+	 *
+	 * @param {Event} e The Click Event to check.
+	 *
+	 */
+	function smoothScroll(e) {
+	  const target = isChildOfType(e.target, 'A');
+	  if (!target) return;
+	  if (target.dataset.scrolltype === 'smooth') {
+	    if (!target.cachedTarget) {
+	      target.cachedTarget = findScrollTarget(target);
+	    }
+	    e.preventDefault();
+	    target.cachedTarget.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+	  }
+	}
+
+
 	document.addEventListener('DOMContentLoaded', () => {
 	  smoothscroll.polyfill();
+	  document.addEventListener('click', smoothScroll);
 	  const menu = Object.create(HeadingMenu);
 	  menu.init();
 	});

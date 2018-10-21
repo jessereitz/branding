@@ -27,6 +27,7 @@ const HeadingMenu = {
     this.ctn.appendChild(this.toggleBtn);
 
     this.nav = generateElement('nav', { klasses: [navClass, hiddenClass] });
+    this.nav.addEventListener('click', this.hide.bind(this));
     this.ctn.appendChild(this.nav);
 
     this.links = this.generateLinks();
@@ -54,9 +55,10 @@ const HeadingMenu = {
   },
 
   /**
-   * generateLinks - Find
+   * generateLinks - Iterates through all targets and creates links pointing to
+   *  them. If the target has data-scrolltarget set, it will use that as the
+   *  href for the link. Otherwise it uses its id attribute.
    *
-   * @returns {type} Description
    */
   generateLinks() {
     this.links = [];
@@ -65,15 +67,11 @@ const HeadingMenu = {
       const link = generateElement(
         'a',
         {
-          href: `#${target.id}`,
+          href: `#${target.dataset.scrolltarget || target.id}`,
           textContent: target.textContent,
+          'data-scrolltype': 'smooth',
         },
       );
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.hide.call(this);
-        target.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-      });
       this.links.push(link);
       this.nav.appendChild(link);
     });
