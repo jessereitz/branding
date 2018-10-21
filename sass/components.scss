@@ -26,6 +26,15 @@ form,
     margin-top: 0;
     margin-bottom: $margin-top-bottom--standard;
   }
+
+  & a {
+    border-color: $primary-color--dark;
+  }
+
+  & a:hover {
+    color: darken($heading-color, 30%);
+    border-color: darken($heading-color, 30%);
+  }
 }
 
 .button-ctn {

@@ -5,6 +5,7 @@ body {
   margin: $margin--none;
   font-size: $font-size--standard;
   scroll-behavior: smooth;
+  color: $text-color--light;
 }
 
 body::before {
@@ -25,7 +26,7 @@ body::before {
 
 body * {
   box-sizing: border-box;
-  color: $text-color--light;
+  // color: $text-color--light;
 }
 
 h1, h2, h3, h4, h5, h6 {

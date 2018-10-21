@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-size: 1em;
   scroll-behavior: smooth;
+  color: #fff;
 }
 
 body::before {
@@ -21,7 +22,6 @@ body::before {
 
 body * {
   box-sizing: border-box;
-  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -162,6 +162,15 @@ form h3 + p, form h3 + dl,
 .hover-card h3 + dl {
   margin-top: 0;
   margin-bottom: 1em;
+}
+form a,
+.hover-card a {
+  border-color: #333;
+}
+form a:hover,
+.hover-card a:hover {
+  color: #6387bb;
+  border-color: #6387bb;
 }
 
 .button-ctn {
