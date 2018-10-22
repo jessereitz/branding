@@ -68,7 +68,7 @@ const HeadingMenu = {
         'a',
         {
           href: `#${target.dataset.scrolltarget || target.id}`,
-          textContent: target.textContent,
+          textContent: target.dataset.linktext || target.textContent,
           'data-scrolltype': 'smooth',
         },
       );
