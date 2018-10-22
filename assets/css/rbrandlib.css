@@ -121,6 +121,11 @@ button:active {
   transform: translateY(0.1em);
 }
 
+form button, form input[type=button], form input[type=submit] {
+  display: inline-block;
+  width: auto;
+}
+
 dt {
   font-weight: bold;
   margin-top: 1em;
