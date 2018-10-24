@@ -35,6 +35,16 @@ form,
     color: darken($heading-color, 30%);
     border-color: darken($heading-color, 30%);
   }
+
+  & a.link-btn {
+    display: inline-block;
+    width: auto;
+    transition: none;
+  }
+
+  & a.link-btn:hover {
+    color: #fff;
+  }
 }
 
 .button-ctn {

@@ -39,7 +39,7 @@ h2 {
   border-bottom: 1px solid darken($heading-color, 15%);
 }
 
-p, a, div, form {
+p, a, div, form, section, main, header, footer {
   font-family: $standard-font;
   max-width: $max-text-width;
   margin: $margin-center--standard;
@@ -49,7 +49,6 @@ p, a, div, form {
 
 a {
   display: inline-block;
-  // color: lighten($link-color, 15%);
   color: #fff;
   text-decoration: none;
   transition: all $transition-time--long;
@@ -76,7 +75,7 @@ label + textarea {
   margin-top: $margin-top-bottom--x-small;
 }
 
-input, textarea, button {
+input, textarea, button, a.link-btn {
   box-sizing: border-box;
   display: block;
   margin-left: 0;
@@ -92,6 +91,15 @@ input, textarea, button {
   border-radius: $border-radius--standard;
 }
 
+a.link-btn {
+  font-weight: normal;
+}
+
+a.link-btn i {
+  color: inherit;
+  transition: inherit;
+}
+
 textarea {
   min-height: $line-height--standard * 2;
   resize: vertical;
@@ -100,20 +108,23 @@ textarea {
 
 input:focus,
 textarea:focus,
-button:focus {
+button:focus,
+a.link-btn:focus {
   border-color: $primary-color;
   box-shadow: 0.2em 0.2em 0.2em 0.1em rgba(0,0,0,0.1);
 }
 
 input[type=submit]:first-child,
 input[type=button]:first-child,
-button:first-child {
+button:first-child,
+a.link-btn:first-child {
   margin-left: 0 !important;
 }
 
 input[type=submit]:hover,
 input[type=button]:hover,
-button:hover {
+button:hover,
+a.link-btn:hover {
   color: $primary-color--light;
   border-color: $primary-color;
   background: $primary-color;
@@ -123,7 +134,8 @@ button:hover {
 
 input[type=submit]:active,
 input[type=button]:active,
-button:active {
+button:active,
+a.link-btn:active {
   position: relative;
   transform: translateY(0.1em);
 }
