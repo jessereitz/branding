@@ -47,6 +47,13 @@ p, a, div, form, section, main, header, footer {
   padding: $padding--none;
 }
 
+section, main, header, footer {
+  font-family: $standard-font;
+  max-width: 100%;
+  padding: $padding--none;
+  margin: 0;
+}
+
 a {
   display: inline-block;
   color: #fff;

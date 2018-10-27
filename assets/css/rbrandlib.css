@@ -42,6 +42,13 @@ p, a, div, form, section, main, header, footer {
   padding: 0;
 }
 
+section, main, header, footer {
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   display: inline-block;
   color: #fff;
