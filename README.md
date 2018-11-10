@@ -14,7 +14,7 @@ To include the JavaScript library, include the following:
 ```
 To include the CSS library, include the following:
 ```html
-<link href="https://cdn.jsdelivr.net/combine/gh/jessereitz/branding@--version--/assets/css/site.min.css" type="text/css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/combine/gh/jessereitz/branding@--version--/assets/css/rbrandlib.css" type="text/css" rel="stylesheet">
 ```
 
 ## Usage
